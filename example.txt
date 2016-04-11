@@ -1,0 +1,10 @@
+
+%read original
+[Y U V] = yuv_import(color,[cols rows],numf);
+%read depth cols= 1024 rows 768
+ [Y2 U2 V2] = yuv_import(depth,[cols rows],numf);
+
+res = yuv_import('..\data\balloons1.yuv',[1024,768],10,0,'YUV420_8')
+%there are total 500 frames in the balloons1.yuv video
+size(res)
+res{1,1}(1,1)
