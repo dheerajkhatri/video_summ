@@ -27,3 +27,4 @@ for frame_no = 1:frame_count
 	curVector = blockDecomp(cur,1,1,rows,cols,d-1,curVector);
 	brightness_depth_prop{1,frame_no}(:,9:16) = curVector;                
 end
+
