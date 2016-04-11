@@ -30,12 +30,12 @@ end
 
 M1 = mean(vh,2);
 B1 = std2(vh);
-S1 = 0; %update this matlab not working currently
-K1 = 0; %update this matlab not working currently
+S1 = skewness(vh);
+K1 = kurtosis(vh);
 
 M2 = mean(vv,2);
 B2 = std2(vv);
-S2 = 0; %update this matlab not working currently
-K2 = 0; %update this matlab not working currently
+S2 = skewness(vv);
+K2 = kurtosis(vv);
 
 R = [M1,B1,S1,K1,M2,B2,S2,K2];
