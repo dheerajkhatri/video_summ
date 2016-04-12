@@ -14,4 +14,4 @@ for curClusters = 2:kmax
         bestS = meanS;
         noClusters = curClusters;
     end
-end    
+end
