@@ -1,4 +1,4 @@
-function read_data(filename,depthfilename,dims,numfrm,startfrm,yuvformat)
+function [y,u,v] = read_data(filename,depthfilename,dims,numfrm,startfrm,yuvformat)
 
 [y,u,v] = yuv_import(filename,dims,numfrm,startfrm,yuvformat);
 [yd,ud,vd] = yuv_import(depthfilename,dims,numfrm,startfrm,yuvformat);
