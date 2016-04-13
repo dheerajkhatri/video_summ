@@ -18,8 +18,8 @@ bestS = 0;
 for curClusters = 2:kmax
     [idx,c] = kmeans(data,curClusters,'Distance','cityblock');
     curScoeff = silhouette(data,idx);
-    meanS = mean(curScoeff);    
-    %display(meanS);
+    meanS = nanmean(curScoeff);    
+    display(meanS);
     if bestS < meanS
         bestS = meanS;
         noClusters = curClusters;
