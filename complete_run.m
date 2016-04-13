@@ -7,13 +7,12 @@ brightness_depth_prop = get_all_frames_profile();
 %convert cell to corresponding matrix on which clustering can be applied
 data = prepare_data_for_clustering(brightness_depth_prop);
 
-%find how many clusters should be taken for this shot
-%kmax: 5
-noClusters = compare_clusters(data,kmax);
-
+%find how many clusters should be taken for this shot and
 %get exact frame number which can represent the cluster means
-%frame_array = get_frame_array()
+%kmax: 5
+kmax = 5;
+key_frames = get_key_frames(data,kmax);
 
 %store resulting frames in video skim
 %filename:output files name
-create_video_skim(y,u,v,filename,frame_array);
+create_video_skim(y,u,v,filename,key_frames);
