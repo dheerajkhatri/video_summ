@@ -6,6 +6,7 @@ brightness_depth_prop = get_all_frames_profile();
 
 %convert cell to corresponding matrix on which clustering can be applied
 data = prepare_data_for_clustering(brightness_depth_prop);
+
 %find how many clusters should be taken for this shot
 %kmax: 5
 noClusters = compare_clusters(data,kmax);
