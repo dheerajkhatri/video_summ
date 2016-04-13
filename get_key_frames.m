@@ -19,7 +19,7 @@ for curClusters = 2:kmax
     [idx,c] = kmeans(data,curClusters,'Distance','cityblock');
     curScoeff = silhouette(data,idx);
     meanS = mean(curScoeff);    
-    display(meanS);
+    %display(meanS);
     if bestS < meanS
         bestS = meanS;
         noClusters = curClusters;
@@ -38,6 +38,7 @@ display(['Best No of Clusters are: ' num2str(noClusters) ' with silhouette coeff
 % CPI(indices);
 % data(CPI(1)); %returns nearest point to centroid from data
 
+closestIdx = zeros(1,noClusters);
 
 %for each cluster get the nearest point
 for iCluster = 1:noClusters

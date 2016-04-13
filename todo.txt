@@ -1,1 +1,6 @@
+
 get_all_frames_profile convert cell->3d array so no conversion needed for clustering
+
+Problems:
+1.kmeans ignoring rows with NaN data and #clusters must be greater than points condition is not satisfies because each point is having NaN alteast once.
+2.get_all_frames_profile function is very slow try to speed up if possible.

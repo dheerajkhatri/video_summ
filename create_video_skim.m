@@ -1,4 +1,4 @@
-function create_video_skim(y,u,v,filename,frame_array)
+function create_video_skim(y,u,v,skimVideoName,key_frames);
 
 no_frames = length(frame_array);
 
@@ -12,4 +12,4 @@ for i = 1:no_frames
     vr{i} = v{frame_array(i)};
 end
 
-yuv_export(yr,ur,vr,filename,no_frames,'w');
+yuv_export(yr,ur,vr,skimVideoName,no_frames,'w');

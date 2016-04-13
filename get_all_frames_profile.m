@@ -1,11 +1,10 @@
-function brightness_depth_prop = get_all_frames_profile()
+function brightness_depth_prop = get_all_frames_profile(d,resultFolder,luminanceMatrix,depthMatrix)
 
-brightness_struct = load('..\res\10_frames_brightness.mat');
-depth_struct = load('..\res\10_frames_depth.mat');
+brightness_struct = load(strcat(resultFolder,'\',luminanceMatrix));
+depth_struct = load(strcat(resultFolder,'\',depthMatrix));
 %frame i can be accessed using brightness_struct.y{i}
 
 frame_count = length(brightness_struct.y);
-d = 3;
 blocks = (4^d-1)/3;
 
 
@@ -27,4 +26,3 @@ for frame_no = 1:frame_count
 	curVector = blockDecomp(cur,1,1,rows,cols,d-1,curVector);
 	brightness_depth_prop{1,frame_no}(:,9:16) = curVector;                
 end
-
