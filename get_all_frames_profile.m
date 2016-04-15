@@ -10,6 +10,9 @@ blocks = (4^d-1)/3;
 
 brightness_depth_prop = cell(1,frame_count);
 
+%brightness and depth struct will be struct of length 1*no_frames and each
+%cell is of dimenssion [width,height]
+
 for frame_no = 1:frame_count
     brightness_depth_prop{1,frame_no} = zeros(blocks,16);
         
